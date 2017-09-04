@@ -1,0 +1,97 @@
+@import "variables";
+
+html, body {width:100%; height:100%;}
+
+* {margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; word-wrap: break-word;}
+table {border-collapse: collapse; width: 100%;}
+input {
+	&:focus {outline: none;}
+}
+img, table {border: none;}
+
+
+a {
+	&:link,&:visited {color: $link-color; text-decoration: none;}
+	&:hover,&:active,&:focus {color: $link-color-hover; text-decoration: underline; outline: 0;}
+	
+}
+
+				
+button {outline: none; cursor: pointer;}
+svg:not(:root) {overflow: hidden;}
+
+
+header,footer,article,section,hgroup,nav,menu,aside,figure,main,video,address,picture,figcaption {display:block;}
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 6px 0;
+	line-height: 1.4;
+	font: {
+		family: 'HelveticaNeueCyr-Medium', sans-serif;
+	    weight: normal; 
+	}
+}
+h1 {font-size: 34px;}
+h2 {font-size: 21px;}
+h3 {font-size: 17px;}
+h4 {font-size: 14px;}
+h5 {font-size: 10px;}
+h6 {font-size: 9px;}
+
+ul, ol {list-style:none;}
+
+p {margin: 6px 0; line-height: 1.4;}
+
+img{width:auto\9;height:auto;max-width:100%;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;}
+
+
+::placeholder {color: $placeholder-color;}
+
+
+/* --------------------- 
+INPUT FIELDS
+--------------------- */
+input[type=text],
+input[type=password],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email],
+input[type=search],
+textarea {
+	background: #fff; 
+	font: {
+		family: 'HelveticaNeueCyr-Roman';
+	    size: 13px;
+	}
+	border: 1px solid #b3b3b3; 
+	@include border-radius(2px);
+	padding: 6px 9px; 
+	color: #262626; 
+	width: 100%; 
+	height: 32px;
+	outline: none;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+textarea {
+	resize: vertical;
+	height: auto;
+}
+
+input[type=text]:hover,
+input[type=password]:hover,
+input[type=url]:hover,
+input[type=tel]:hover,
+input[type=number]:hover,
+input[type=color]:hover,
+input[type=email]:hover,
+input[type=search]:hover,
+textarea:hover {border-color: #262626;}
+textarea::placeholder {color: #bcbcbc;}
+
+:focus {outline: 0;}
+
