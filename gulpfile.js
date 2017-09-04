@@ -10,7 +10,18 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 var autoprefixer = require('gulp-autoprefixer');
+var webserver = require('gulp-webserver');
 
+
+
+gulp.task('webserver', function() {
+  gulp.src('src')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: true,
+      open: true
+    }));
+});
 
 
 
@@ -90,7 +101,7 @@ gulp.task('clean:dist', function(callback){
 });
 
 gulp.task('default', function (callback) {
-  runSequence(['sass', 'browserSync', 'watch'], callback)
+  runSequence(['sass', 'browserSync', 'watch', 'webserver'], callback)
 });
 
 
